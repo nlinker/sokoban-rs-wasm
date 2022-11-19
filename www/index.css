@@ -1,0 +1,89 @@
+body {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 100%;
+    background-color: black;
+}
+
+#game-board {
+    position: sticky;
+    top: 1em;
+    left: 1em;
+    bottom: 1em;
+    right: 1em;
+    display: grid;
+    grid-template-columns: repeat(1, 32px);
+    grid-template-rows: repeat(1, 32px);
+    grid-gap: 2px;
+    border: 2px;
+}
+
+.cell {
+    box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.05), inset -2px -2px 0 #212f51;
+}
+
+.worker-u {
+    background: url(skin/mover_up.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-d {
+    background: url(skin/mover_down.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-l {
+    background: url(skin/mover_left.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-r {
+    background: url(skin/mover_right.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-on-goal-u {
+    background: url(skin/mover_store_up.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-on-goal-d {
+    background: url(skin/mover_store_down.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-on-goal-l {
+    background: url(skin/mover_store_left.bmp) no-repeat;
+    background-size: cover;
+}
+
+.worker-on-goal-r {
+    background: url(skin/mover_store_right.bmp) no-repeat;
+    background-size: cover;
+}
+
+.goal {
+    background: url(skin/bluestore.bmp) no-repeat;
+    background-size: cover;
+}
+
+.box {
+    background: url(skin/crate.bmp) no-repeat;
+    background-size: cover;
+}
+
+.box-on-goal {
+    background: url(skin/crate_store.bmp) no-repeat;
+    background-size: cover;
+}
+
+.empty {
+    background: url(skin/bluetiles.bmp) no-repeat;
+    background-size: cover;
+}
+
+.wall {
+    background: url(skin/wall.bmp) no-repeat;
+    background-size: cover;
+}
