@@ -1,4 +1,4 @@
-import init, {get_height, get_width} from "../pkg/sokoban_rs_wasm.js";
+import init, {Direction, get_cells, get_height, get_width} from "../pkg/sokoban_rs_wasm.js";
 
 await initialize();
 
@@ -7,19 +7,8 @@ async function initialize() {
 
     let height = get_height();
     let width = get_width();
-    console.log("h = ", height);
-    console.log("w = ", width);
-    let cells = [
-        70, 70, 70, 70, 60, 60,
-        70, 60, 30, 70, 60, 60,
-        70, 60, 60, 70, 70, 70,
-        70, 50, 11, 60, 60, 70,
-        70, 60, 60, 40, 60, 70,
-        70, 60, 60, 70, 70, 70,
-        70, 70, 70, 70, 60, 60,
-    ];
-
-    let Direction = {0: "U", 1: "D", 2: "L", 3: "R"};
+    let cells = get_cells();
+    console.log(cells);
 
     // TODO add the code to interact with the Wasm logic
     drawCells();
