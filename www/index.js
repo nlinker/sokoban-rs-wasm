@@ -1,6 +1,6 @@
 import init from "../pkg/sokoban_rs_wasm.js";
 
-initialize();
+await initialize();
 
 async function initialize() {
     await init();
