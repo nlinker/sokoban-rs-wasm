@@ -1,8 +1,29 @@
+mod utils;
+
 use wasm_bindgen::prelude::*;
 
 // start here
 
-#[wasm_bindgen]
-pub fn add_one(x: u32) -> u32 {
-    x + 1
+pub enum Direction {
+    U, D, L, R,
 }
+
+pub enum Cell {
+    Worker(Direction),
+    WorkerOnGoal(Direction),
+    Goal,
+    Box,
+    BoxOnGoal,
+    Empty,
+    Wall,
+}
+
+pub struct GameState {
+    height: usize,
+    width: usize,
+    cells: Vec<Vec<Cell>>,
+    is_complete: bool,
+}
+
+
+

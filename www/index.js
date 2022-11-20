@@ -1,4 +1,4 @@
-import init from "../pkg/sokoban_rs_wasm.js";
+import init, {add_one} from "../pkg/sokoban_rs_wasm.js";
 
 await initialize();
 
@@ -16,6 +16,9 @@ async function initialize() {
         70, 60, 60, 70, 70, 70,
         70, 70, 70, 70, 60, 60,
     ];
+
+    add_one(1);
+
     let Direction = {0: "U", 1: "D", 2: "L", 3: "R"};
 
     // TODO add the code to interact with the Wasm logic
