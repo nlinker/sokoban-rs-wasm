@@ -1,12 +1,14 @@
-import init from "../pkg/sokoban_rs_wasm.js";
+import init, {get_height, get_width} from "../pkg/sokoban_rs_wasm.js";
 
 await initialize();
 
 async function initialize() {
     await init();
 
-    let height = 7;
-    let width = 6;
+    let height = get_height();
+    let width = get_width();
+    console.log("h = ", height);
+    console.log("w = ", width);
     let cells = [
         70, 70, 70, 70, 60, 60,
         70, 60, 30, 70, 60, 60,

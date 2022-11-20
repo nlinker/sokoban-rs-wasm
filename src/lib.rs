@@ -54,6 +54,17 @@ pub struct GameState {
     is_complete: bool,
 }
 
+#[wasm_bindgen]
+pub fn get_height() -> usize {
+    GS.lock().unwrap().height
+}
+
+#[wasm_bindgen]
+pub fn get_width() -> usize {
+    GS.lock().unwrap().width
+}
+
+
 #[cfg(test)]
 mod tests {
     #[test]
